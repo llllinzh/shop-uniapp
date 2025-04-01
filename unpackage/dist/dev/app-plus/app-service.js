@@ -31,7 +31,7 @@ if (uni.restoreGlobal) {
 }
 (function(vue) {
   "use strict";
-  const _imports_0$1 = "/static/img/swiper1.jpg";
+  const _imports_0$2 = "/static/img/swiper1.jpg";
   const _imports_1$1 = "/static/img/swiper2.jpg";
   const _imports_2$1 = "/static/img/swiper3.jpg";
   const _export_sfc = (sfc, props) => {
@@ -41,8 +41,8 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$9 = {};
-  function _sfc_render$8(_ctx, _cache) {
+  const _sfc_main$a = {};
+  function _sfc_render$9(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("swiper", {
       "indicator-dots": true,
       autoplay: true,
@@ -53,7 +53,7 @@ if (uni.restoreGlobal) {
         vue.createElementVNode("view", { class: "swiper-item" }, [
           vue.createElementVNode("image", {
             class: "swiper-img",
-            src: _imports_0$1,
+            src: _imports_0$2,
             mode: ""
           })
         ])
@@ -78,20 +78,20 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const IndexSwiper = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-53d9d14f"], ["__file", "D:/商城uniapp/app/components/index/indexSwiper.vue"]]);
-  const _imports_0 = "/static/img/Children.jpg";
+  const IndexSwiper = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-53d9d14f"], ["__file", "D:/商城uniapp/app/components/index/indexSwiper.vue"]]);
+  const _imports_0$1 = "/static/img/Children.jpg";
   const _imports_1 = "/static/img/Children1.jpg";
   const _imports_2 = "/static/img/Furnishing.jpg";
   const _imports_3 = "/static/img/Furnishing1.jpg";
   const _imports_4 = "/static/img/Furnishing2.jpg";
   const _imports_5 = "/static/img/Furnishing3.jpg";
-  const _sfc_main$8 = {};
-  function _sfc_render$7(_ctx, _cache) {
+  const _sfc_main$9 = {};
+  function _sfc_render$8(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "recommend bg-color" }, [
       vue.createElementVNode("view", { class: "recommend-item" }, [
         vue.createElementVNode("image", {
           class: "item-big",
-          src: _imports_0,
+          src: _imports_0$1,
           mode: ""
         }),
         vue.createElementVNode("view", { class: "item-small" }, [
@@ -138,40 +138,67 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const Recommend = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-9d217078"], ["__file", "D:/商城uniapp/app/components/index/Recommend.vue"]]);
-  const _sfc_main$7 = {};
-  function _sfc_render$6(_ctx, _cache) {
+  const Recommend = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-9d217078"], ["__file", "D:/商城uniapp/app/components/index/Recommend.vue"]]);
+  const _sfc_main$8 = {};
+  function _sfc_render$7(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "card" }, [
       vue.createElementVNode("view", null, "-"),
       vue.createElementVNode("view", { class: "card-name" }, "猜你喜欢"),
       vue.createElementVNode("view", null, "-")
     ]);
   }
-  const Card = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-aea130cd"], ["__file", "D:/商城uniapp/app/components/common/Card.vue"]]);
-  const _sfc_main$6 = {
+  const Card = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-aea130cd"], ["__file", "D:/商城uniapp/app/components/common/Card.vue"]]);
+  const _sfc_main$7 = {
     __name: "Commodity",
-    props: {
-      dataList: {
-        type: Array,
-        required: true
-      }
-    },
     setup(__props, { expose: __expose }) {
       __expose();
-      const props = __props;
-      const __returned__ = { props };
+      const commodityList = [
+        {
+          id: 1,
+          imgUrl: "/static/img/commodity1.jpg",
+          name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
+          pprice: "299",
+          oprice: "659",
+          discount: "5.2"
+        },
+        {
+          id: 2,
+          imgUrl: "../../static/img/commodity2.jpg",
+          name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
+          pprice: "299",
+          oprice: "659",
+          discount: "5.2"
+        },
+        {
+          id: 3,
+          imgUrl: "../../static/img/commodity3.jpg",
+          name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
+          pprice: "299",
+          oprice: "659",
+          discount: "5.2"
+        },
+        {
+          id: 4,
+          imgUrl: "../../static/img/commodity4.jpg",
+          name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
+          pprice: "299",
+          oprice: "659",
+          discount: "5.2"
+        }
+      ];
+      const __returned__ = { commodityList };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   };
-  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "commodity" }, [
       vue.createCommentVNode(" 单个商品组件 "),
-      (vue.openBlock(true), vue.createElementBlock(
+      (vue.openBlock(), vue.createElementBlock(
         vue.Fragment,
         null,
-        vue.renderList($setup.props.dataList, (item, index) => {
-          return vue.openBlock(), vue.createElementBlock("view", {
+        vue.renderList($setup.commodityList, (item, index) => {
+          return vue.createElementVNode("view", {
             class: "commodity-item",
             key: index
           }, [
@@ -214,77 +241,53 @@ if (uni.restoreGlobal) {
             ])
           ]);
         }),
-        128
-        /* KEYED_FRAGMENT */
+        64
+        /* STABLE_FRAGMENT */
       ))
     ]);
   }
-  const Commodity = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-1cb28c60"], ["__file", "D:/商城uniapp/app/components/common/Commodity.vue"]]);
-  const _sfc_main$5 = {
+  const Commodity = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-1cb28c60"], ["__file", "D:/商城uniapp/app/components/common/Commodity.vue"]]);
+  const _sfc_main$6 = {
     __name: "CommodityList",
     setup(__props, { expose: __expose }) {
       __expose();
-      const commodityList = [
-        {
-          id: 1,
-          imgUrl: "/static/img/commodity1.jpg",
-          name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
-          pprice: "299",
-          oprice: "659",
-          discount: "5.2"
-        },
-        {
-          id: 2,
-          imgUrl: "../../static/img/commodity2.jpg",
-          name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
-          pprice: "299",
-          oprice: "659",
-          discount: "5.2"
-        },
-        {
-          id: 3,
-          imgUrl: "../../static/img/commodity3.jpg",
-          name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
-          pprice: "299",
-          oprice: "659",
-          discount: "5.2"
-        },
-        {
-          id: 4,
-          imgUrl: "../../static/img/commodity4.jpg",
-          name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
-          pprice: "299",
-          oprice: "659",
-          discount: "5.2"
-        }
-      ];
-      const __returned__ = { commodityList, Commodity };
+      const __returned__ = { Commodity };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   };
-  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "Commodity-list" }, [
       vue.createCommentVNode(" 商品列表组件 "),
-      vue.createVNode($setup["Commodity"], { dataList: $setup.commodityList })
+      vue.createVNode($setup["Commodity"])
     ]);
   }
-  const CommodityList = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__file", "D:/商城uniapp/app/components/common/CommodityList.vue"]]);
+  const CommodityList = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__file", "D:/商城uniapp/app/components/common/CommodityList.vue"]]);
+  const _imports_0 = "/static/img/banner1.jpg";
+  const _sfc_main$5 = {};
+  function _sfc_render$4(_ctx, _cache) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "banner" }, [
+      vue.createElementVNode("image", {
+        class: "banner-img",
+        src: _imports_0
+      })
+    ]);
+  }
+  const Banner = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__scopeId", "data-v-b9a50e02"], ["__file", "D:/商城uniapp/app/components/index/Banner.vue"]]);
   const _sfc_main$4 = {
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
-      const __returned__ = { IndexSwiper, Recommend, Card, CommodityList };
+      const __returned__ = { IndexSwiper, Recommend, Card, CommodityList, Banner };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   };
   function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("view", null, [
-      vue.createVNode($setup["IndexSwiper"]),
-      vue.createVNode($setup["Recommend"]),
-      vue.createVNode($setup["Card"], { cardTitle: "猜你喜欢" }),
-      vue.createVNode($setup["CommodityList"])
+    return vue.openBlock(), vue.createElementBlock("view", { class: "index" }, [
+      vue.createCommentVNode(" 首页推荐 "),
+      vue.createCommentVNode(" <IndexSwiper></IndexSwiper>\r\n		<Recommend></Recommend>\r\n		<Card cardTitle='猜你喜欢'></Card>\r\n		<CommodityList></CommodityList> "),
+      vue.createVNode($setup["Banner"])
     ]);
   }
   const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__file", "D:/商城uniapp/app/pages/index/index.vue"]]);

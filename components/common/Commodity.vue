@@ -2,7 +2,7 @@
 	<view class="commodity">
 		<!-- 单个商品组件 -->
 
-		<view class="commodity-item" v-for="(item,index) in props.dataList" :key="index">
+		<view class="commodity-item" v-for="(item,index) in commodityList" :key="index">
 			<image class="commodty-img" :src="item.imgUrl" mode=""></image>
 			<view class="commodity-content">
 				<text class="commodity-name">
@@ -21,12 +21,40 @@
 </template>
 
 <script setup>
-const props = defineProps({
-	dataList:{
-		type:Array,
-		required:true
-	}
-})
+	const commodityList = [{
+			id: 1,
+			imgUrl: "/static/img/commodity1.jpg",
+			name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
+			pprice: "299",
+			oprice: "659",
+			discount: "5.2"
+		},
+		{
+			id: 2,
+			imgUrl: "../../static/img/commodity2.jpg",
+			name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
+			pprice: "299",
+			oprice: "659",
+			discount: "5.2"
+		},
+		{
+			id: 3,
+			imgUrl: "../../static/img/commodity3.jpg",
+			name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
+			pprice: "299",
+			oprice: "659",
+			discount: "5.2"
+		},
+		{
+			id: 4,
+			imgUrl: "../../static/img/commodity4.jpg",
+			name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
+			pprice: "299",
+			oprice: "659",
+			discount: "5.2"
+		}
+	]
+	
 </script>
 
 <style scoped>
