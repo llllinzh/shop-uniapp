@@ -1329,3 +1329,10 @@ uni-radio-group uni-label, uni-checkbox-group uni-label{
 .bg-color{
 	background-color: #42B7FB;
 }
+::-webkit-scrollbar{
+	display: none;
+	width: 0 !important;
+	height: 0 !important;
+	-webkit-appearance: none;
+	background: transparent;
+}

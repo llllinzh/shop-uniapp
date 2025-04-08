@@ -1,13 +1,17 @@
 <template>
 	<view class="card">
 		<view>-</view>
-		<view class="card-name">猜你喜欢</view>
+		<slot>
+			<view class="card-name">{{cardTitle}}</view>
+		</slot>
 		<view>-</view>
 	</view>
 </template>
 
 <script setup>
-
+const props = defineProps({
+	cardTitle:String
+})
 </script>
 
 <style scoped>

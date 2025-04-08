@@ -1,18 +1,18 @@
 <template>
-	<view class="commodity">
+	<view class="commodity" :style="'flex-wrap:'+wrap+';'">
 		<!-- 单个商品组件 -->
 
-		<view class="commodity-item" v-for="(item,index) in commodityList" :key="index">
-			<image class="commodty-img" :src="item.imgUrl" mode=""></image>
+		<view class="commodity-item" v-for="(item,index) in props.dataList" :key="index" :style="'width:'+itemW+';'">
+			<image class="commodity-img" :src="item.imgUrl" mode="" :style="'height:'+bigH+';'"></image>
 			<view class="commodity-content">
-				<text class="commodity-name">
+				<text class="commodity-name" :style="'font-size:'+nameSize+';'">
 					{{item.name}}
 				</text>
 				<view>
-					<text class="pprice">￥{{item.pprice}}</text>
-					<text class="oprice">￥{{item.oprice}}</text>
+					<text class="pprice" :style="'font-size:'+nameSize+';'">￥{{item.pprice}}</text>
+					<text class="oprice" :style="'font-size:'+nameSize+';'">￥{{item.oprice}}</text>
 				</view>
-				<text class="discount">{{item.discount}}折</text>
+				<text class="discount" :style="'font-size:'+nameSize+';'">{{item.discount}}折</text>
 			</view>
 
 		</view>
@@ -21,56 +21,43 @@
 </template>
 
 <script setup>
-	const commodityList = [{
-			id: 1,
-			imgUrl: "/static/img/commodity1.jpg",
-			name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
-			pprice: "299",
-			oprice: "659",
-			discount: "5.2"
-		},
-		{
-			id: 2,
-			imgUrl: "../../static/img/commodity2.jpg",
-			name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
-			pprice: "299",
-			oprice: "659",
-			discount: "5.2"
-		},
-		{
-			id: 3,
-			imgUrl: "../../static/img/commodity3.jpg",
-			name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
-			pprice: "299",
-			oprice: "659",
-			discount: "5.2"
-		},
-		{
-			id: 4,
-			imgUrl: "../../static/img/commodity4.jpg",
-			name: "大衣绒毛大款2020年必买，不买你就不行了，爆款疯狂GG008",
-			pprice: "299",
-			oprice: "659",
-			discount: "5.2"
-		}
-	]
+const props = defineProps({
+	dataList:Array,
+	//宽度
+	itemW:{
+		type:String,
+		default:"375rpx"
+	},
+	//高度
+	bigH:{
+		type:String,
+		default:"375rpx"
+	},
+	//是否换行
+	wrap:{
+		type:String,
+		default:"wrap"
+	},
+	//文字大小
+	nameSize:{
+		type:String,
+		default:"26rpx"
+	}
+})
 	
 </script>
 
 <style scoped>
 	.commodity {
 		display: flex;
-		flex-wrap: wrap;
 	}
 
 	.commodity-item {
-		width: 375rpx;
 		padding-bottom: 20rpx;
 	}
 
-	.commodty-img {
+	.commodity-img {
 		width: 100%;
-		height: 375rpx;
 	}
 
 	.commodity-content {
